@@ -1,15 +1,34 @@
-version: '3.9'
+version: "3.9"
+
 services:
   appsite:
     build: ./appsite
     container_name: appsite
     restart: unless-stopped
-    ports:
-      - "8080:80"   # позже можно поменять на nginx reverse proxy
+    networks:
+      - webnet
 
   partners:
     build: ./partners
     container_name: partners
     restart: unless-stopped
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
     ports:
-      - "8081:80"
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - appsite
+      - partners
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
