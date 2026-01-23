@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  appsite:
+    build: ./appsite
+    container_name: appsite
+    restart: unless-stopped
+    ports:
+      - "8080:80"   # позже можно поменять на nginx reverse proxy
+
+  partners:
+    build: ./partners
+    container_name: partners
+    restart: unless-stopped
+    ports:
+      - "8081:80"
