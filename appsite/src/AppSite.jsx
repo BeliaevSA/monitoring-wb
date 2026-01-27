@@ -55,7 +55,12 @@ const CTAButton = ({ children, className = '', href = BOT_LINK }) => (
     target="_blank"
     rel="noopener noreferrer"
     className={`inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-all ${className}`}
-    onClick={() => ym(106478241,'reachGoal','start_bot')}
+    onClick={() => {
+      // ym(106478241,'reachGoal','start_bot')
+      if (typeof window !== "undefined" && window.ym) {
+        window.ym(106478241,'reachGoal','start_bot')
+      }
+    }}
   >
     {children}
   </a>
