@@ -31,10 +31,10 @@ services:
       - partners
     networks:
       - webnet
-      - botnet  # подключаемся к сети бота, чтобы проксировать его домен
+      - maxbot_botnet
 
 networks:
   webnet:
     driver: bridge
-  botnet:
-    external: true  # сеть уже создана ботом, просто подключаемся
+  maxbot_botnet:
+    external: true
