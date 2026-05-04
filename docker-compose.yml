@@ -15,6 +15,13 @@ services:
     networks:
       - webnet
 
+  managers:
+    build: ./managers
+    container_name: managers
+    restart: unless-stopped
+    networks:
+      - webnet
+
   nginx:
     image: nginx:latest
     container_name: nginx_site
@@ -29,6 +36,7 @@ services:
     depends_on:
       - appsite
       - partners
+      - managers
     networks:
       - webnet
       - maxbot_botnet
