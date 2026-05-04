@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppSite from "./AppSite";
-import PartnerPresentation from "./PartnerPresentation";
+import ManagerPresentation from "./ManagerPresentation";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={<AppSite />} /> */}
-        <Route path="/" element={<PartnerPresentation />} />
+        <Route path="/" element={<ManagerPresentation />} />
       </Routes>
     </BrowserRouter>
   );
