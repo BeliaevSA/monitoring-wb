@@ -17,7 +17,7 @@ services:
 
   nginx:
     image: nginx:latest
-    container_name: nginx
+    container_name: nginx_site
     restart: unless-stopped
     ports:
       - "80:80"
@@ -25,25 +25,16 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./certbot/conf:/etc/letsencrypt:ro
-      - ./certbot/www:/var/www/certbot:rw
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - appsite
       - partners
     networks:
       - webnet
-
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'while :; do sleep 12h & wait $${!}; certbot renew; done;'"
-    restart: unless-stopped
-    networks:
-      - webnet
+      - botnet  # подключаемся к сети бота, чтобы проксировать его домен
 
 networks:
   webnet:
     driver: bridge
+  botnet:
+    external: true  # сеть уже создана ботом, просто подключаемся
