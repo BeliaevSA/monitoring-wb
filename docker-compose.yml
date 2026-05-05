@@ -8,20 +8,6 @@ services:
     networks:
       - webnet
 
-  partners:
-    build: ./partners
-    container_name: partners
-    restart: unless-stopped
-    networks:
-      - webnet
-
-  managers:
-    build: ./managers
-    container_name: managers
-    restart: unless-stopped
-    networks:
-      - webnet
-
   nginx:
     image: nginx:latest
     container_name: nginx_site
