@@ -23,8 +23,6 @@ services:
       - /opt/maxbot/files:/var/www/botfiles:ro
     depends_on:
       - appsite
-      - partners
-      - managers
     networks:
       - webnet
       - maxbot_botnet
