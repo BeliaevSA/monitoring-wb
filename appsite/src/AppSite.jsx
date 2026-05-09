@@ -223,7 +223,7 @@ export default function AppSite() {
                 🚀 Начать бесплатно
               </a>
               <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)' }}>
-                ✓ 10 дней бесплатно&nbsp;&nbsp;✓ Без карт
+                ✓ 10 дней бесплатно&nbsp;&nbsp;✓ Без автоматических списаний
               </div>
             </div>
 
@@ -311,7 +311,7 @@ export default function AppSite() {
                 label: 'Отслеживание цен',
                 title: 'До 30 товаров под контролем',
                 desc: 'Добавляйте ссылки на любые товары Wildberries. Бот мгновенно оповестит при любом изменении цены — вверх или вниз.',
-                points: ['До 30 товаров одновременно', 'Уведомления при изменении цены', 'Карточка товара с фото и рейтингом', 'История изменений цен'],
+                points: ['До 30 товаров одновременно', 'Уведомления при изменении цены', 'Карточка товара с фото', 'История изменений цен'],
                 gradient: 'linear-gradient(135deg, rgba(168,85,247,0.15), rgba(99,102,241,0.08))',
                 border: 'rgba(168,85,247,0.2)',
                 accent: '#a855f7'
@@ -320,8 +320,8 @@ export default function AppSite() {
                 icon: '🏷️',
                 label: 'Скидки брендов',
                 title: 'Следите за любимыми брендами',
-                desc: 'Выберите до 5 брендов и получайте уведомления когда скидка превышает 25%. Охват ~15 000 качественных товаров в каждой категории.',
-                points: ['До 5 брендов на мониторинге', 'Порог скидки от 25%', 'Рейтинг товара > 4.7 и > 200 оценок', 'Тематические категории'],
+                desc: 'Выберите до 5 брендов и получайте уведомления о выгодных скидках. Порог срабатывания рассчитывается динамически на основе среднестатистической скидки за определённый период.',
+                points: ['До 5 брендов на мониторинге', 'Динамический порог скидки', 'Только товары выбранного бренда', 'Тематические категории'],
                 gradient: 'linear-gradient(135deg, rgba(236,72,153,0.15), rgba(249,115,22,0.08))',
                 border: 'rgba(236,72,153,0.2)',
                 accent: '#ec4899'
@@ -410,7 +410,7 @@ export default function AppSite() {
                 <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.5)', marginBottom: '8px' }}>Пробный период</div>
                 <div style={{ fontFamily: 'Syne, sans-serif', fontSize: '52px', fontWeight: 800, color: '#4ade80', lineHeight: 1 }}>10</div>
                 <div style={{ fontFamily: 'Syne, sans-serif', fontSize: '16px', fontWeight: 700, color: '#4ade80', marginBottom: '20px' }}>дней бесплатно</div>
-                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '14px', lineHeight: 1.7 }}>Полный доступ ко всем функциям. Без привязки карты.</p>
+                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '14px', lineHeight: 1.7 }}>Полный доступ ко всем функциям. Без автоматических списаний.</p>
               </div>
             </FadeIn>
 
@@ -465,7 +465,7 @@ export default function AppSite() {
                   Начните экономить сегодня
                 </div>
                 <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.85)', marginBottom: '32px' }}>
-                  10 дней полного доступа — бесплатно. Без привязки карты.
+                  10 дней полного доступа — бесплатно. Без автоматических списаний.
                 </p>
                 <a href={BOT_LINK} target="_blank" rel="noreferrer" style={{
                   display: 'inline-flex', alignItems: 'center', gap: '10px',
@@ -476,7 +476,7 @@ export default function AppSite() {
                   🚀 Запустить бота
                 </a>
                 <div style={{ marginTop: '18px', fontSize: '13px', color: 'rgba(255,255,255,0.65)' }}>
-                  ✓ Мессенджер MAX &nbsp;·&nbsp; ✓ Без карт &nbsp;·&nbsp; ✓ Отмена в 1 клик
+                  ✓ Мессенджер MAX &nbsp;·&nbsp; ✓ Без автоматических списаний &nbsp;·&nbsp; ✓ Отмена в 1 клик
                 </div>
               </div>
             </div>

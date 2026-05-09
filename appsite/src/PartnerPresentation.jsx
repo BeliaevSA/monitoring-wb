@@ -237,9 +237,9 @@ export default function PartnerPresentation() {
 
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '16px' }}>
             {[
-              { users: 100, label: '100 активных пользователей', monthly: '16 000 ₽', yearly: '192 000 ₽', color: ACCENT, tag: 'Старт' },
-              { users: 200, label: '200 активных пользователей', monthly: '32 000 ₽', yearly: '384 000 ₽', color: '#a855f7', tag: 'Рост', featured: true },
-              { users: 500, label: '500 активных пользователей', monthly: '80 000 ₽', yearly: '960 000 ₽', color: '#f59e0b', tag: 'Профи' }
+              { users: 100, label: '100 активных пользователей', monthly: '16 000 ₽', yearly: '192 000 ₽', color: ACCENT, featured: false },
+              { users: 200, label: '200 активных пользователей', monthly: '32 000 ₽', yearly: '384 000 ₽', color: '#a855f7', featured: true },
+              { users: 500, label: '500 активных пользователей', monthly: '80 000 ₽', yearly: '960 000 ₽', color: '#f59e0b', featured: false }
             ].map((tier, i) => (
               <FadeIn key={tier.users} delay={i * 0.1}>
                 <div className="card-h" style={{
@@ -247,10 +247,6 @@ export default function PartnerPresentation() {
                   border: `1px solid ${tier.featured ? 'rgba(168,85,247,0.35)' : 'rgba(255,255,255,0.07)'}`,
                   borderRadius: '24px', padding: isMobile ? '28px 20px' : '36px 28px', textAlign: 'center', position: 'relative'
                 }}>
-                  {tier.featured && (
-                    <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7, #6366f1)', borderRadius: '100px', padding: '4px 16px', fontSize: '11px', fontWeight: 700, whiteSpace: 'nowrap' }}>Популярно</div>
-                  )}
-                  <div style={{ display: 'inline-block', padding: '6px 14px', background: 'rgba(255,255,255,0.06)', borderRadius: '100px', fontSize: '11px', fontWeight: 700, color: tier.color, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{tier.tag}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>{tier.label}</div>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '36px' : '42px', fontWeight: 800, color: tier.color, lineHeight: 1 }}>{tier.monthly}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: '16px' }}>в месяц</div>
@@ -287,9 +283,8 @@ export default function PartnerPresentation() {
               { icon: '📊', title: 'Статистика', desc: 'Переходы, регистрации, активные подписки — все данные в реальном времени' },
               { icon: '💳', title: 'Начисления', desc: 'История выплат и текущий баланс. Прозрачная система учёта каждого рубля' },
               { icon: '🔗', title: 'Ваша ссылка', desc: 'Уникальная реферальная ссылка с вашим ID. Просто скопируйте и делитесь' },
-              { icon: '📣', title: 'Промо-материалы', desc: 'Готовые тексты и баннеры для публикаций в соцсетях' },
               { icon: '🎯', title: 'MAX канал', desc: 'Настройка обязательной подписки на ваш канал при регистрации через вашу ссылку' },
-              { icon: '🤝', title: 'Поддержка', desc: 'Личный менеджер поможет с настройкой и ответит на любые вопросы' }
+              { icon: '🤝', title: 'Поддержка', desc: 'Команда проекта ответит на любые вопросы' }
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <div className="card-h" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '20px', padding: isMobile ? '20px 16px' : '28px' }}>

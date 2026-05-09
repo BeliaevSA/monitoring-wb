@@ -134,17 +134,17 @@ export default function ManagerPresentation() {
         <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1, width: '100%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '8px 20px', background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.28)', borderRadius: '100px', marginBottom: '32px', fontSize: isMobile ? '12px' : '13px', color: ACCENT2, fontWeight: 600 }}>
-              🏆 Двухуровневый пассивный доход
+              🏆 Пассивный доход с блогеров
             </div>
 
             <h1 style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '38px' : 'clamp(44px, 6vw, 84px)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.04em', marginBottom: '24px' }}>
-              Стройте команду<br />
+              Приглашайте блогеров<br />
               <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(135deg, #818cf8 0%, #6366f1 40%, #4f46e5 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>и получайте</span>
-              {' '}доход<br />на двух уровнях
+              {' '}доход<br />с каждой подписки
             </h1>
 
             <p style={{ fontSize: isMobile ? '16px' : '19px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '640px', marginBottom: '40px', padding: isMobile ? '0 4px' : 0 }}>
-              Приглашайте партнёров-инфлюенсеров в проект и зарабатывайте с каждой их подписки. Привлекайте других менеджеров — и получайте доход с их команд тоже.
+              Приглашайте блогеров и инфлюенсеров в проект и зарабатывайте 15% с каждой их подписки — 60 ₽ за каждую оплату на весь период сотрудничества.
             </p>
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '48px', width: '100%' }}>
@@ -165,11 +165,10 @@ export default function ManagerPresentation() {
             </div>
 
             {/* Key metrics */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: isMobile ? '12px' : '24px', width: '100%', maxWidth: '700px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: isMobile ? '12px' : '24px', width: '100%', maxWidth: '500px' }}>
               {[
-                { n: '10%', l: 'с подписок партнёров', c: ACCENT2 },
-                { n: '40 ₽', l: 'за каждую подписку', c: '#a855f7' },
-                { n: '5%', l: 'с команды 2-го уровня', c: '#f59e0b' }
+                { n: '15%', l: 'с подписок блогеров', c: ACCENT2 },
+                { n: '60 ₽', l: 'за каждую подписку', c: '#a855f7' }
               ].map(m => (
                 <div key={m.l} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: isMobile ? '16px' : '20px', padding: isMobile ? '20px 12px' : '28px 20px', textAlign: 'center' }}>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '28px' : '40px', fontWeight: 800, color: m.c, lineHeight: 1, marginBottom: '8px' }}>{m.n}</div>
@@ -193,10 +192,9 @@ export default function ManagerPresentation() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[
-              { n: '01', icon: '📝', title: 'Подайте заявку', desc: 'Заполните форму и станьте менеджером. После одобрения вы получаете личный кабинет с реферальной ссылкой для партнёров.', color: ACCENT2 },
-              { n: '02', icon: '🤝', title: 'Приглашайте партнёров', desc: 'Находите инфлюенсеров, блогеров, авторов каналов — и приглашайте их в партнёрскую программу по вашей ссылке. Вы получаете 10% (40 ₽) с каждой оплаты их пользователей на весь период сотрудничества.', color: '#a855f7' },
-              { n: '03', icon: '👥', title: 'Приглашайте менеджеров', desc: 'Привлекайте коллег-менеджеров. Партнёры нового менеджера тоже работают на вас: вы получаете 5% (20 ₽) с каждой подписки пользователей его команды.', color: '#6366f1' },
-              { n: '04', icon: '💸', title: 'Зарабатывайте на двух уровнях', desc: 'Доход поступает автоматически — с каждой оплаты подписки как от партнёров первого уровня, так и от команды менеджеров второго уровня.', color: '#f59e0b' }
+              { n: '01', icon: '📝', title: 'Подайте заявку', desc: 'Заполните форму и станьте менеджером. После одобрения вы получаете личный кабинет с реферальной ссылкой.', color: ACCENT2 },
+              { n: '02', icon: '🤝', title: 'Приглашайте блогеров', desc: 'Находите инфлюенсеров, блогеров, авторов каналов — и приглашайте их в партнёрскую программу по вашей ссылке.', color: '#a855f7' },
+              { n: '03', icon: '💸', title: 'Зарабатывайте', desc: 'Вы получаете 15% (60 ₽) с каждой оплаты подписки ваших блогеров на весь период сотрудничества. Доход поступает автоматически с каждого платежа.', color: '#f59e0b' }
             ].map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.1}>
                 <div className="card-h" style={{ display: 'flex', alignItems: 'flex-start', gap: isMobile ? '16px' : '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '20px', padding: isMobile ? '20px' : '28px 32px' }}>
@@ -219,33 +217,20 @@ export default function ManagerPresentation() {
           <FadeIn>
             <div style={{ textAlign: 'center', marginBottom: isMobile ? '48px' : '72px' }}>
               <div style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', color: ACCENT2, marginBottom: '14px', fontWeight: 600 }}>Структура дохода</div>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '28px' : 'clamp(32px, 4vw, 52px)', fontWeight: 800, letterSpacing: '-0.03em' }}>Два источника дохода</h2>
-              <p style={{ color: 'rgba(255,255,255,0.45)', marginTop: '16px', fontSize: isMobile ? '13px' : '16px', padding: isMobile ? '0 4px' : 0 }}>Подписка 400 ₽ · Партнёр 1 уровня: 10% = 40 ₽ · Менеджер 2 уровня: 5% = 20 ₽</p>
+              <h2 style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '28px' : 'clamp(32px, 4vw, 52px)', fontWeight: 800, letterSpacing: '-0.03em' }}>Один источник дохода</h2>
+              <p style={{ color: 'rgba(255,255,255,0.45)', marginTop: '16px', fontSize: isMobile ? '13px' : '16px', padding: isMobile ? '0 4px' : 0 }}>Подписка 400 ₽ · Блогер (1 уровень): 15% = 60 ₽</p>
             </div>
           </FadeIn>
 
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginBottom: '20px', maxWidth: '480px', margin: '0 auto 20px' }}>
             <FadeIn delay={0}>
               <div className="card-h" style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.18), rgba(79,70,229,0.08))', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '28px', padding: isMobile ? '36px 24px' : '40px 32px', textAlign: 'center', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: ACCENT_GRAD, borderRadius: '100px', padding: '4px 16px', fontSize: '11px', fontWeight: 700, whiteSpace: 'nowrap' }}>1-й уровень</div>
                 <div style={{ fontSize: '40px', marginBottom: '16px' }}>🤝</div>
-                <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '22px', fontWeight: 800, marginBottom: '8px' }}>Ваши партнёры</h3>
-                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '14px', lineHeight: 1.7, marginBottom: '24px' }}>Инфлюенсеры, которых вы пригласили в проект напрямую</p>
-                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '44px' : '52px', fontWeight: 800, color: ACCENT2, lineHeight: 1 }}>40 ₽</div>
+                <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '22px', fontWeight: 800, marginBottom: '8px' }}>Ваши блогеры</h3>
+                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '14px', lineHeight: 1.7, marginBottom: '24px' }}>Инфлюенсеры и блогеры, которых вы пригласили в проект</p>
+                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '44px' : '52px', fontWeight: 800, color: ACCENT2, lineHeight: 1 }}>60 ₽</div>
                 <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.45)', marginTop: '6px' }}>с каждой оплаты их пользователей</div>
-                <div style={{ marginTop: '24px', background: 'rgba(99,102,241,0.12)', borderRadius: '12px', padding: '12px 16px', fontSize: '13px', color: 'rgba(255,255,255,0.55)' }}>10% от подписки 400 ₽</div>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.1}>
-              <div className="card-h" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: '28px', padding: isMobile ? '36px 24px' : '40px 32px', textAlign: 'center', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7, #7c3aed)', borderRadius: '100px', padding: '4px 16px', fontSize: '11px', fontWeight: 700, whiteSpace: 'nowrap' }}>2-й уровень</div>
-                <div style={{ fontSize: '40px', marginBottom: '16px' }}>👥</div>
-                <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '22px', fontWeight: 800, marginBottom: '8px' }}>Команды ваших менеджеров</h3>
-                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '14px', lineHeight: 1.7, marginBottom: '24px' }}>Партнёры менеджеров, которых привлекли вы</p>
-                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '44px' : '52px', fontWeight: 800, color: '#a855f7', lineHeight: 1 }}>20 ₽</div>
-                <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.45)', marginTop: '6px' }}>с каждой оплаты их пользователей</div>
-                <div style={{ marginTop: '24px', background: 'rgba(168,85,247,0.1)', borderRadius: '12px', padding: '12px 16px', fontSize: '13px', color: 'rgba(255,255,255,0.55)' }}>5% от подписки 400 ₽</div>
+                <div style={{ marginTop: '24px', background: 'rgba(99,102,241,0.12)', borderRadius: '12px', padding: '12px 16px', fontSize: '13px', color: 'rgba(255,255,255,0.55)' }}>15% от подписки 400 ₽</div>
               </div>
             </FadeIn>
           </div>
@@ -273,20 +258,16 @@ export default function ManagerPresentation() {
 
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '16px' }}>
             {[
-              { tag: 'Старт', color: ACCENT2, label: '3 партнёра · без 2-го уровня', monthly: '12 000 ₽', yearly: '144 000 ₽', featured: false },
-              { tag: 'Рост', color: '#a855f7', label: '10 партнёров + 5 менеджеров (у каждого 5 партнёров)', monthly: '140 000 ₽', yearly: '1 680 000 ₽', featured: true },
-              { tag: 'Профи', color: '#f59e0b', label: '20 партнёров + 10 менеджеров (у каждого 10 партнёров)', monthly: '480 000 ₽', yearly: '5 760 000 ₽', featured: false }
+              { color: ACCENT2, label: '3 блогера · по 100 активных пользователей', monthly: '18 000 ₽', yearly: '216 000 ₽', featured: false },
+              { color: '#a855f7', label: '10 блогеров · по 100 активных пользователей', monthly: '60 000 ₽', yearly: '720 000 ₽', featured: true },
+              { color: '#f59e0b', label: '20 блогеров · по 100 активных пользователей', monthly: '120 000 ₽', yearly: '1 440 000 ₽', featured: false }
             ].map((tier, i) => (
-              <FadeIn key={tier.tag} delay={i * 0.1}>
+              <FadeIn key={i} delay={i * 0.1}>
                 <div className="card-h" style={{
                   background: tier.featured ? 'linear-gradient(135deg, rgba(168,85,247,0.18), rgba(99,102,241,0.1))' : 'rgba(255,255,255,0.03)',
                   border: `1px solid ${tier.featured ? 'rgba(168,85,247,0.35)' : 'rgba(255,255,255,0.07)'}`,
                   borderRadius: '24px', padding: isMobile ? '28px 20px' : '36px 28px', textAlign: 'center', position: 'relative'
                 }}>
-                  {tier.featured && (
-                    <div style={{ position: 'absolute', top: '-14px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7, #6366f1)', borderRadius: '100px', padding: '4px 16px', fontSize: '11px', fontWeight: 700, whiteSpace: 'nowrap' }}>Популярно</div>
-                  )}
-                  <div style={{ display: 'inline-block', padding: '6px 14px', background: 'rgba(255,255,255,0.06)', borderRadius: '100px', fontSize: '11px', fontWeight: 700, color: tier.color, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{tier.tag}</div>
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '20px', lineHeight: 1.6 }}>{tier.label}</div>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '36px' : '42px', fontWeight: 800, color: tier.color, lineHeight: 1 }}>{tier.monthly}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: '16px' }}>в месяц</div>
@@ -320,11 +301,10 @@ export default function ManagerPresentation() {
 
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(3, 1fr)', gap: isMobile ? '12px' : '20px' }}>
             {[
-              { icon: '📊', title: 'Статистика сети', desc: 'Партнёры и менеджеры 1-го и 2-го уровня, их подписки — в реальном времени' },
-              { icon: '💳', title: 'Начисления', desc: 'История выплат с разбивкой по уровням. Прозрачный учёт каждого рубля' },
-              { icon: '🔗', title: 'Ваша ссылка', desc: 'Уникальная реферальная ссылка для приглашения партнёров и менеджеров' },
-              { icon: '📣', title: 'Промо-материалы', desc: 'Готовые презентации и тексты для привлечения новых партнёров' },
-              { icon: '🏗️', title: 'Управление командой', desc: 'Список всех ваших партнёров и менеджеров, их показатели и статус' },
+              { icon: '📊', title: 'Статистика сети', desc: 'Ваши блогеры-партнёры и их подписки — в реальном времени' },
+              { icon: '💳', title: 'Начисления', desc: 'История выплат с детализацией. Прозрачный учёт каждого рубля' },
+              { icon: '🔗', title: 'Ваша ссылка', desc: 'Уникальная реферальная ссылка для приглашения блогеров' },
+              { icon: '🏗️', title: 'Управление командой', desc: 'Список всех ваших блогеров, их показатели и статус подписки' },
               { icon: '🤝', title: 'Поддержка', desc: 'Прямой контакт с командой проекта для решения любых вопросов' }
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
