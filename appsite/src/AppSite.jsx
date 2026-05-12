@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const BOT_LINK = 'https://max.ru/id503360228433_bot?start=8838317';
 
-const useInView = (threshold = 0.15) => {
+const useInView = (threshold = 0.2) => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
