@@ -250,9 +250,9 @@ export default function PartnerPresentation() {
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>{tier.label}</div>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '36px' : '42px', fontWeight: 800, color: tier.color, lineHeight: 1 }}>{tier.monthly}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: '16px' }}>в месяц</div>
-                  <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />
+                  {/* <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />
                   <div style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.7)' }}>{tier.yearly}</div>
-                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>в год</div>
+                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>в год</div> */}
                 </div>
               </FadeIn>
             ))}
