@@ -258,9 +258,9 @@ export default function ManagerPresentation() {
 
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '16px' }}>
             {[
-              { color: ACCENT2, label: '3 блогера · по 100 активных пользователей', monthly: '18 000 ₽', yearly: '216 000 ₽', featured: false },
-              { color: '#a855f7', label: '10 блогеров · по 100 активных пользователей', monthly: '60 000 ₽', yearly: '720 000 ₽', featured: true },
-              { color: '#f59e0b', label: '20 блогеров · по 100 активных пользователей', monthly: '120 000 ₽', yearly: '1 440 000 ₽', featured: false }
+              { color: ACCENT2, label: '3 блогера · по 100 активных пользователей', monthly: '24 000 ₽', yearly: '288 000 ₽', featured: false },
+              { color: '#a855f7', label: '10 блогеров · по 100 активных пользователей', monthly: '80 000 ₽', yearly: '960 000 ₽', featured: true },
+              { color: '#f59e0b', label: '20 блогеров · по 100 активных пользователей', monthly: '160 000 ₽', yearly: '1 920 000 ₽', featured: false }
             ].map((tier, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="card-h" style={{
@@ -271,9 +271,9 @@ export default function ManagerPresentation() {
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '20px', lineHeight: 1.6 }}>{tier.label}</div>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '36px' : '42px', fontWeight: 800, color: tier.color, lineHeight: 1 }}>{tier.monthly}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: '16px' }}>в месяц</div>
-                  <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />
+                  {/* <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />
                   <div style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.7)' }}>{tier.yearly}</div>
-                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>в год</div>
+                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>в год</div> */}
                 </div>
               </FadeIn>
             ))}
