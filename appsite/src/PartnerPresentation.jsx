@@ -162,12 +162,13 @@ export default function PartnerPresentation() {
               </a>
             </div>
 
-            {/* Key metrics */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: isMobile ? '12px' : '24px', width: '100%', maxWidth: '700px' }}>
+            {/* Key metrics — with 10K+ */}
+            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? '12px' : '24px', width: '100%', maxWidth: '800px' }}>
               {[
                 { n: '40%', l: 'с каждой оплаты', c: ACCENT },
                 { n: '160 ₽', l: 'за подписку', c: '#a855f7' },
-                { n: '∞', l: 'со всех платежей', c: '#f59e0b' }
+                { n: '∞', l: 'со всех платежей', c: '#f59e0b' },
+                { n: '10 000+', l: 'ПОЛЬЗОВАТЕЛЕЙ в 2026*', c: '#818cf8' }
               ].map(m => (
                 <div key={m.l} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: isMobile ? '16px' : '20px', padding: isMobile ? '20px 12px' : '28px 20px', textAlign: 'center' }}>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '28px' : '40px', fontWeight: 800, color: m.c, lineHeight: 1, marginBottom: '8px' }}>{m.n}</div>
@@ -216,7 +217,7 @@ export default function PartnerPresentation() {
               <div>
                 <div style={{ fontWeight: 700, fontSize: isMobile ? '16px' : '18px', marginBottom: '8px', color: ACCENT }}>Бонус для владельцев каналов в MAX</div>
                 <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, fontSize: isMobile ? '13px' : '15px' }}>
-                  Если у вас есть канал в мессенджере MAX, мы настроим <strong style={{ color: 'white' }}>обязательную подписку на ваш канал</strong> при регистрации пользователей через вашу ссылку. Каждый новый пользователь бота — это новый подписчик вашего канала автоматически.
+                  Если у вас есть канал в мессенджере MAX, мы настроим <strong style={{ color: 'white' }}>подписку на ваш канал</strong> при регистрации пользователей через вашу ссылку. Каждый новый пользователь бота — это новый подписчик вашего канала автоматически.
                 </p>
               </div>
             </div>
@@ -250,9 +251,6 @@ export default function PartnerPresentation() {
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginBottom: '20px' }}>{tier.label}</div>
                   <div style={{ fontFamily: 'Syne, sans-serif', fontSize: isMobile ? '36px' : '42px', fontWeight: 800, color: tier.color, lineHeight: 1 }}>{tier.monthly}</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', marginTop: '6px', marginBottom: '16px' }}>в месяц</div>
-                  {/* <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.07)', margin: '16px 0' }} />
-                  <div style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.7)' }}>{tier.yearly}</div>
-                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '4px' }}>в год</div> */}
                 </div>
               </FadeIn>
             ))}
@@ -357,10 +355,10 @@ export default function PartnerPresentation() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ padding: isMobile ? '32px 20px' : '40px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+      <footer style={{ padding: isMobile ? '32px 20px 0' : '40px 40px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           {isMobile ? (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', textAlign: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', textAlign: 'center', paddingBottom: '20px' }}>
               <a href="https://мониторинг-вб.рф" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, fontSize: '18px', textDecoration: 'none' }}>
                 <span style={{ color: 'white' }}>Мониторинг</span>
                 <span style={{ color: ACCENT }}>·ВБ</span>
@@ -373,7 +371,7 @@ export default function PartnerPresentation() {
               <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.25)' }}>© 2026 Мониторинг ВБ</div>
             </div>
           ) : (
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px', paddingBottom: '20px' }}>
               <a href="https://мониторинг-вб.рф" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, textDecoration: 'none' }}>
                 <span style={{ color: 'white' }}>Мониторинг</span>
                 <span style={{ color: ACCENT }}>·ВБ</span>
@@ -386,6 +384,12 @@ export default function PartnerPresentation() {
               <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.25)' }}>© 2026 Мониторинг ВБ</div>
             </div>
           )}
+          {/* DISCLAIMER */}
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '16px 0 28px' }}>
+            <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)', lineHeight: 1.6 }}>
+              * Данные о количестве пользователей являются прогнозными на 2026 год и основаны на текущей динамике роста платформы. Фактические показатели могут отличаться.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

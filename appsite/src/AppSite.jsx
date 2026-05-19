@@ -161,7 +161,6 @@ export default function AppSite() {
           <span style={{ color: '#a855f7' }}>·ВБ</span>
         </div>
 
-        {/* Десктоп: ссылки + кнопка */}
         <div className="nav-links-desktop">
           <a href="#features" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: '14px' }}>Возможности</a>
           <a href="#pricing" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', fontSize: '14px' }}>Тарифы</a>
@@ -171,7 +170,6 @@ export default function AppSite() {
           }}>Запустить бота →</a>
         </div>
 
-        {/* Мобиль: компактная кнопка */}
         <a href={BOT_LINK} target="_blank" rel="noreferrer" className="nav-cta-mobile shine-btn" style={{
           padding: '9px 16px', background: 'linear-gradient(135deg, #a855f7, #6366f1)',
           borderRadius: '100px', fontSize: '13px', fontWeight: 700, color: 'white',
@@ -182,7 +180,6 @@ export default function AppSite() {
 
       {/* HERO */}
       <section className="hero-section" style={{ position: 'relative' }}>
-        {/* BG mesh */}
         <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
           <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '700px', height: '700px', background: 'radial-gradient(circle, rgba(168,85,247,0.15) 0%, transparent 70%)', borderRadius: '50%' }} />
           <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)', borderRadius: '50%' }} />
@@ -234,10 +231,17 @@ export default function AppSite() {
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{l}</div>
                 </div>
               ))}
+              {/* 10K+ users stat */}
+              <div>
+                <div style={{ fontFamily: 'Syne, sans-serif', fontSize: '26px', fontWeight: 800, color: '#a855f7' }}>10 000+</div>
+                <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  пользователей в 2026<sup style={{ fontSize: '9px', color: 'rgba(168,85,247,0.7)' }}>*</sup>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT: floating phone mockup — скрыт на мобиле */}
+          {/* RIGHT: floating phone mockup */}
           <div className="hero-phone-col" style={{ justifyContent: 'center', position: 'relative' }}>
             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(168,85,247,0.3) 0%, transparent 70%)' }} />
             <div style={{ position: 'relative', width: '240px', height: '500px', animation: 'float 6s ease-in-out infinite', zIndex: 2 }}>
@@ -287,7 +291,7 @@ export default function AppSite() {
       </section>
 
       {/* TICKER */}
-      <Ticker items={['Отслеживание цен', 'Скидки брендов', '10 дней бесплатно', 'Мессенджер MAX', 'До 30 товаров', 'До 5 брендов', 'Уведомления', 'Мониторинг 24/7']} />
+      <Ticker items={['Отслеживание цен', 'Скидки брендов', '10 дней бесплатно', 'Мессенджер MAX', 'До 30 товаров', 'До 5 брендов', '10 000+ пользователей в 2026', 'Уведомления', 'Мониторинг 24/7']} />
 
       {/* FEATURES */}
       <section id="features" className="features-section">
@@ -399,7 +403,7 @@ export default function AppSite() {
           <FadeIn>
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
               <div style={{ fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#a855f7', marginBottom: '14px', fontWeight: 600 }}>Стоимость</div>
-              <h2 className="section-h2" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, letterSpacing: '-0.03em' }}>Честная цена</h2>
+              <h2 className="section-h2" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, letterSpacing: '-0.03em' }}>Справедливая цена</h2>
             </div>
           </FadeIn>
 
@@ -485,8 +489,8 @@ export default function AppSite() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ padding: '32px 20px', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-        <div className="footer-inner" style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <footer style={{ padding: '32px 20px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <div className="footer-inner" style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '20px' }}>
           <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}>
             <span style={{ color: 'white' }}>Мониторинг</span>
             <span style={{ color: '#a855f7' }}>·ВБ</span>
@@ -497,6 +501,12 @@ export default function AppSite() {
             <a href={BOT_LINK} target="_blank" rel="noreferrer" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontSize: '13px' }}>Запустить бота</a>
           </div>
           <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.25)' }}>© 2026 Мониторинг ВБ</div>
+        </div>
+        {/* DISCLAIMER */}
+        <div style={{ maxWidth: '1100px', margin: '0 auto', borderTop: '1px solid rgba(255,255,255,0.05)', padding: '16px 0 28px' }}>
+          <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.2)', lineHeight: 1.6 }}>
+            * Данные о количестве пользователей являются прогнозными на 2026 год и основаны на текущей динамике роста платформы. Фактические показатели могут отличаться.
+          </p>
         </div>
       </footer>
     </div>
